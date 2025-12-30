@@ -1,0 +1,22 @@
+Create_Database
+
+CREATE DATABASE SALES_DASHBOARD;
+
+CREATE TABLE sales_data (
+    id SERIAL PRIMARY KEY,
+    region VARCHAR(50),
+    product VARCHAR(50),
+    quantity INT,
+    total_sales FLOAT,
+    sale_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO sales_data (region, product, quantity, total_sales)
+VALUES
+('West', 'Product A', 10, 250.50),
+('South', 'Product B', 5, 125.75),
+('East', 'Product C', 8, 200.00),
+('North', 'Product D', 3, 75.25);
+
+SELECT * 
+FROM sales_data;
